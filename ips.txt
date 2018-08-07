@@ -1,5 +1,4 @@
 
 #user@ip@password#
 
- bird@35.154.251.105@bird
-#ant@13.232.153.157@ant
+bird@35.154.251.105@bird
