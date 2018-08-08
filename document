@@ -1,0 +1,47 @@
+
+Transfer files from one ec2 instance to another ec2 instance
+
+
+
+sudo apt-get update
+
+sudo apt-get install -y openssh-server
+
+sudo service ssh restart
+
+sudo which sshpass
+
+sudo apt-get install sshpass
+
+sudo apt-get install -y vim
+
+To add users like,
+
+--->$ sudo adduser main
+-->here it will ask password..setup it.
+-->to setup permissions like, /home/user.
+-->$ sudo chmod 777 -R /home/user.
+
+--->$ sudo vim /etc/sudoers
+-->here to give full permissions like root level.
+
+--->$ sudo vim /etc/ssh/sshd_config
+--># Change to no to disable tunnelled clear text passwords
+PasswordAuthentication no --> yes
+
+-->Now to install jdk by using the below command.
+
+--->$ sudo wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz" -O jdk-8-linux-x64.tar.gz
+
+-->Then extract it by putting proper directory. And in .bashrc to set this path.
+
+--->Now to install tomcat.
+-->$ sudo wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz
+
+-->Then extract it.
+
+--->Now to install jenkins.war file.
+---> wget http://mirrors.jenkins.io/war-stable/2.89.2/jenkins.war
+
+
+
